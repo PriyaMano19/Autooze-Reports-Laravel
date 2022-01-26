@@ -1,0 +1,55 @@
+
+.sale-content{
+    position: absolute;
+    width: 1039px;
+    height: 580px;
+    left: 150px;
+    top: 150px;
+    
+}
+
+/*Bootstrap*/
+.card-title{
+    color: #115166;
+}
+
+.card{
+    background: #F9F7F7;
+    border-radius: 3%;
+
+}
+
+.card-img-top{
+    height: 200px;
+    width:300px
+}
+
+    .col-sm-6 .card{
+        background: #58ACB8;
+         width:350px;
+        height:200px;
+    }
+
+
+
+
+  .col-sm-6 .card .card-body .card-title {
+    color: #FFFFFF;
+    font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 30px;
+line-height: 35px;
+  }
+
+
+ .icon_sale{
+    position: absolute;
+    left: 65%;
+    right: 20%;
+    top: 15%;
+    bottom: 10%;
+    height:100px;
+  
+ }
+
