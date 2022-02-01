@@ -5,7 +5,7 @@
     <img src="{{asset('images/sales.png')}}" class="card-img-top" alt="image">
     <div class="card-body">
     <h2 class="card-title">Sales Total</h2>
-      <h3 class="card-text">RS 10000.00</h3>
+      <h3 class="card-text">RS.{{$t_sales}}.00</h3>
       <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
     </div>
   </div>
@@ -34,7 +34,7 @@
   <img src="{{asset('images/expense-total.png')}}" class="card-img-top" alt="image">
     <div class="card-body">
     <h2 class="card-title">Expense Total</h2>
-      <h3 class="card-text">RS 10000.00</h3>
+      <h3 class="card-text">RS.{{$t_expense}}.00</h3>
       <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
     </div>
   </div>

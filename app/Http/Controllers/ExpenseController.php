@@ -3,12 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Carbon\Carbon;
-
-use App\SalesSummary;
 use App\ExpenseSummary;
-
-class summaryController extends Controller
+use Illuminate\Support\Facades\DB;
+use Carbon\Carbon;
+class ExpenseController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,23 +14,20 @@ class summaryController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-
     {
-        $t_sales=SalesSummary::whereDate('Created_At', Carbon::today())->sum('Total_Purchase_Price');
-        $t_expense=ExpenseSummary::whereDate('created', Carbon::today())->sum('amount');
-        return view('front.summary',compact('t_sales','t_expense'));
+        //
     }
-
-    
-  
-
 
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
-   
+    public function create()
+    {
+        //
+    }
+
     /**
      * Store a newly created resource in storage.
      *
@@ -50,9 +45,12 @@ class summaryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function showexpense()
     {
-        //
+        $expensesummary = ExpenseSummary::whereDate('created', Carbon::today())->get();
+        $t_amount=ExpenseSummary::whereDate('created', Carbon::today())->sum('amount');
+        return view('front.expense',compact('expensesummary','t_amount'));
+    
     }
 
     /**

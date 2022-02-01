@@ -75,7 +75,7 @@
           class="fas fa-anchor"></i> <span>Autooze</span></a></header>
         <nav class="dashboard-nav-list">
           <a href="#" class="dashboard-nav-item"><i class="fas fa-home"></i> Home </a>
-          <a href="summary" class="dashboard-nav-item active"><i class="fas fa-tachometer-alt"></i> Daily Custom</a>
+          <a href="summary" class="dashboard-nav-item active"><i class="fas fa-tachometer-alt"></i> Daily Insights</a>
           <a href="cash" class="dashboard-nav-item"><i class="fas fa-money-bill-alt"></i></i> Cash In Hand </a>
           <div class='dashboard-nav-dropdown'>
             <a href="#!" class="dashboard-nav-item dashboard-nav-dropdown-toggle"><i class="fas fa-chart-line"></i> Daily Summary </a>

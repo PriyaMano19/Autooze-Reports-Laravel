@@ -18,9 +18,10 @@ Route::get('/', function () {
 });
 
 Route::get('/summary', 'summaryController@index')->name('summary');
-Route::get('/sale', 'summaryController@salesummary')->name('salesummary');
-Route::get('/purchase', 'summaryController@purchasesummary')->name('purchasesummary');
-Route::get('/expense', 'summaryController@expensesummary')->name('expensesummary');
+Route::get('/sale', 'SalesController@showsales')->name('salesummary');
+
+Route::get('/purchase', 'PurchaseController@showpurchase')->name('purchasesummary');
+Route::get('/expense', 'ExpenseController@showexpense')->name('expensesummary');
 Route::get('/cash', 'CashInHandController@index')->name('cash');
 Auth::routes();
 
