@@ -18,9 +18,11 @@ class summaryController extends Controller
     public function index()
 
     {
-        $t_sales=SalesSummary::whereDate('Created_At', Carbon::today())->sum('Total_Purchase_Price');
+        $t_sales=SalesSummary::whereDate('Created_At', Carbon::today())->sum('Amount');
         $t_expense=ExpenseSummary::whereDate('created', Carbon::today())->sum('amount');
-        return view('front.summary',compact('t_sales','t_expense'));
+        $cogs=SalesSummary::whereDate('Created_At', Carbon::today())->sum('Total_Purchase_Price');
+        $net_total= $t_sales - $cogs;
+        return view('front.summary',compact('t_sales','t_expense','cogs','net_total'));
     }
 
     

@@ -109,7 +109,7 @@
             href="#" class="dashboard-nav-item"><i class="fas fa-user"></i> Profile </a>
           <div class="nav-item-divider"></div>
           <a
-            href="#" class="dashboard-nav-item"><i class="fas fa-sign-out-alt"></i> Logout </a>
+            href="{{ route('signout') }}" class="dashboard-nav-item"><i class="fas fa-sign-out-alt"></i> Logout </a>
         </nav>
       </div>
       <div class='dashboard-app'>

@@ -60,6 +60,14 @@ class SalesController extends Controller
         return view('front.salesummary',compact('salessummary','t_orders','t_sales'));
     }
 
+    public function mobilesales()
+    {
+        $salessummary = SalesSummary::whereDate('Created_At', Carbon::today())->get();
+        $t_orders = SalesSummary::whereDate('Created_At', Carbon::today())->count();
+        $t_sales=SalesSummary::whereDate('Created_At', Carbon::today())->sum('Total_Purchase_Price');
+        return view('front.sales_Mobile',compact('salessummary','t_orders','t_sales'));
+    }
+
     /**
      * Show the form for editing the specified resource.
      *

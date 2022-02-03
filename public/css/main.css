@@ -20,6 +20,7 @@
    
 }
 
+
 .card-deck .card{
     border-radius: 3%;
 }
@@ -35,8 +36,8 @@
 }
 .col-sm-6 .card{
         background: #58ACB8;
-         width:350px;
-        height:200px;
+         width:330px;
+        height:170px;
         border-radius: 3%;
     }
 
@@ -74,3 +75,10 @@ line-height: 35px;
  .container .row .col-12 .card-table .card{
     border-radius: 0%;
  }
+ #alignright {
+    float: left;
+    width:33.33333%;
+    text-align:right;
+}
+
+

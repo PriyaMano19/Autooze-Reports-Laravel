@@ -49,7 +49,8 @@ class ExpenseController extends Controller
     {
         $expensesummary = ExpenseSummary::whereDate('created', Carbon::today())->get();
         $t_amount=ExpenseSummary::whereDate('created', Carbon::today())->sum('amount');
-        return view('front.expense',compact('expensesummary','t_amount'));
+        $t_expenses=ExpenseSummary::whereDate('created', Carbon::today())->count();
+        return view('front.expense',compact('expensesummary','t_amount','t_expenses'));
     
     }
 

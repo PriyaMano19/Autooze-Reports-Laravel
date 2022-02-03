@@ -6,8 +6,8 @@
     <div class="card">
       <div class="card-body">
       <img src="{{asset('images/icon_sale.svg')}}" class="icon_sale" alt="image">
-        <h5 class="card-title">Daily Expenses</h5>
-        <h3 class="card-text">RS {{$t_amount}}.00</h3>
+        <h5 class="card-title">Total Sales</h5>
+        <h3 class="card-text">RS.{{$t_sales}}.00</h3>
        
       </div>
     </div>
@@ -16,10 +16,10 @@
   <div class="col-sm-6">
     <div class="card"  >
       <div class="card-body">
-      <img src="{{asset('images/icon_order.svg')}}" class="icon_sale" alt="image">
-        <h5 class="card-title">Total expenses</h5>
-        <h3 class="card-text">{{$t_expenses}}</h3>
-        <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
+      <img src="{{asset('images/icon_sale.svg')}}" class="icon_sale" alt="image">
+        <h5 class="card-title">Total Orders</h5>
+        <h3 class="card-text">{{$t_orders}}</h3>
+        
       </div>
     </div>
   </div>
@@ -37,21 +37,23 @@
                         <thead class="thead-light">
                             <tr>
                                 <th> <label class="customcheckbox m-b-20"> <input type="checkbox" id="mainCheckbox"> <span class="checkmark"></span> </label> </th>
-                                <th scope="col">ID</th>
-                                <th scope="col">Payee_Name</th>
+                                <th scope="col">OrderId</th>
+                            
                                 <th scope="col">Amount</th>
-                                <th scope="col">Created_At</th>
+                                
                                 
                             </tr>
                         </thead>
                         <tbody class="customtable">
-                          @foreach($expensesummary as $data)
+                          @foreach($salessummary as $value)
                             <tr>
                                 <th> <label class="customcheckbox"> <input type="checkbox" class="listCheckbox"> <span class="checkmark"></span> </label> </th>
-                                <td>{{$data->id}}</td>
-                                <td>{{$data->payee_name}}</td>
-                                <td>{{$data->amount}}</td>
-                                <td>{{$data->created}}</td>
+                                <td>{{$value->order_id}}</td>
+                               
+                                <td>{{$value->Amount}}</td>
+                               
+                               
+                               
                                 
                             </tr>
                            @endforeach

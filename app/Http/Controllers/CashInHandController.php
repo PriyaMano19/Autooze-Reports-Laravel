@@ -3,6 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Carbon\Carbon;
+
+use App\SalesSummary;
+use App\ExpenseSummary;
+use App\PurchaseSummary;
+use App\CashInHand;
 
 class CashInHandController extends Controller
 {
@@ -12,8 +18,18 @@ class CashInHandController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
+
     {
-        return view('front.CashInHand');
+
+        
+        $cashin=SalesSummary::whereDate('Created_At', Carbon::today())->sum('Amount');
+        return view('front.CashInHand',compact('cashin'));
+
+        
+        //$t_cashin = CashInHand::whereDate('created', Carbon::today())->where('method', 'cash')->sum('amount');
+        //$t_Pamount=PurchaseSummary::whereDate('created_at', Carbon::today())->sum('purchase_price');
+        //$t_amount=ExpenseSummary::whereDate('created', Carbon::today())->sum('amount');
+        //return view('front.CashInHand',compact($t_Pamount,$t_amount));
     }
 
     /**

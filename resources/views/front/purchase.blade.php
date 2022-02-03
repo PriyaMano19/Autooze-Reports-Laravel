@@ -6,8 +6,8 @@
     <div class="card" >
       <div class="card-body">
          <img src="{{asset('images/icon_sale.svg')}}" class="icon_sale" alt="image">
-        <h5 class="card-title">Total Purchases</h5><br>
-        <h3 class="card-text">RS.{{$t_Pamount}}.00</h3>
+        <h5 class="card-title">Daily Purchases</h5><br>
+        <h3 class="card-text">RS {{$t_Pamount}}.00</h3>
       
       </div>
     </div>
@@ -18,7 +18,7 @@
       <div class="card-body">
           
          <img src="{{asset('images/icon_order.svg')}}" class="icon_sale" alt="image">
-        <h5 class="card-title">Total Orders</h5><br>
+        <h5 class="card-title">Total Purchases</h5><br>
         <h3 class="card-text">{{$t_purchase}}</h3>
     
       </div>
