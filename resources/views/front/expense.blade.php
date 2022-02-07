@@ -5,7 +5,7 @@
   <div class="col-sm-6">
     <div class="card">
       <div class="card-body">
-      <img src="{{asset('images/icon_sale.svg')}}" class="icon_sale" alt="image">
+      <img src="{{asset('images/icon1.svg')}}" class="icon_sale" alt="image">
         <h5 class="card-title">Daily Expenses</h5>
         <h3 class="card-text">RS {{$t_amount}}.00</h3>
        
